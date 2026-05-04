@@ -1,0 +1,5 @@
+{
+  "name": "Montecarlo ChemicalFooRisk_22_03_25",
+  "description": "Herramienta de simulación probabilística (Monte Carlo) para evaluar la exposición a contaminantes químicos en alimentos y comparar riesgos toxicológicos.",
+  "requestFramePermissions": []
+}

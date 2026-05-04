@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Montecarlo FoodRisk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'muy-bajo': '#34d399',
+              'bajo': '#10b981',
+              'moderado': '#f59e0b',
+              'alto': '#ef4444',
+              'muy-alto': '#b91c1c',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for dark mode */
+      .dark ::-webkit-scrollbar {
+        width: 8px;
+      }
+      .dark ::-webkit-scrollbar-track { background: #1e293b; }
+      .dark ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+      .dark ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+      
+      .loading-spinner {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border: 3px solid rgba(255,255,255,.3);
+          border-radius: 50%;
+          border-top-color: #fff;
+          animation: spin 1s ease-in-out infinite;
+      }
+      
+      @keyframes spin {
+          to { transform: rotate(360deg); }
+      }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "html2canvas": "https://esm.sh/html2canvas@1.4.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-slate-100 transition-colors duration-300">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
